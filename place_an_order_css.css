@@ -1,0 +1,289 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*margin: 0;
+  padding: 0;
+  font-family: "Raleway";
+  font-weight: lighter;
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 1px;*/
+}
+
+header {
+  width: 100%;
+  height: 100vh;
+  background: url(cropped-1920-1080-28237.jpg) no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.logo {
+  position: fixed;
+  float: left;
+  margin: 17px 40px;
+  color: #fff;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+nav {
+  position: relative;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  display: block;
+  width: auto;
+  background: rgba(0,0,0,0);
+  overflow: hidden;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+  transition: 1s;
+  text-align: center;
+}
+
+nav.black ul {
+  background: #000;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 20px;
+}
+
+.proper-align {
+  padding-left: 15em;
+}
+
+nav ul li a {
+  text-decoration: none;
+  display: inline-block;
+  color: #fff;
+  font-size: 20px;
+}
+
+.cool-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+}
+
+.cool-link:hover::after {
+  width: 100%;
+  transition: width .3s;
+}
+
+img {
+  position: relative;
+  width: 300px;
+  height: 200px;
+}
+
+p {
+  text-align: center;
+  margin-top: 15px;
+  animation-delay: .2s;
+  font-size: 20px;
+  color: #fff;
+}
+.menu {
+  width: 1000px;
+  margin: 10px auto 0;
+  display: table;
+  box-sizing: border-box;
+}
+
+.row {
+  transition: 1s;
+}
+
+.column {
+  display: table-cell;
+  padding: 20px;
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  transition: 1s;
+}
+
+@media(max-width: 768px) {
+  .menu {
+    margin: 0;
+    padding: 10px 0;
+    width: 100%;
+  }
+
+  .column {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+  }
+}
+
+@-webkit-keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.row:nth-child(1) .column:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.row:nth-child(1) .column:nth-child(2) {
+  animation-delay: 1.5s;
+}
+
+.row:nth-child(1) .column:nth-child(3) {
+  animation-delay: 2s;
+}
+
+.row:nth-child(2) .column:nth-child(1) {
+  animation-delay: 2.5s;
+}
+
+.row:nth-child(2) .column:nth-child(2) {
+  animation-delay: 3s;
+}
+
+.row:nth-child(2) .column:nth-child(3) {
+  animation-delay: 3.5s;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+#cartButton {
+  padding: 20px;
+  cursor: pointer;
+  position: absolute;
+  top: 80%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+li {
+  color: #fff;
+  font-size: 20px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+#logout {
+  float: right;
+}
+/*
+#logoutButton {
+  top: 1;
+  background-color: #d9534f;
+  color: #FFF;
+  border-radius: 6px;
+  padding: 8px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+  float: right;
+}
+*/
+#myButton {
+  background-color: #d9534f;
+  color: #FFF;
+  top: 10px;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 10px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: 20px;
+  transition: 0.5s;
+}
+
+#userImage {
+  width: 20px;
+  height: 20px;
+}
+
+.right-align {
+  float: right;
+}

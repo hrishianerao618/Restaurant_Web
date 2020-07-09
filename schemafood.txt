@@ -1,0 +1,4 @@
+login(username,password)
+customer(username,password,fname,lname,address,phone,credit,ordertype)
+staff(fname,lname,post,phone,id,address,workingtime/day)
+order(customer name,address,food name,hotel name,food type,payment ethod,acknowledgement)

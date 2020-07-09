@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+    <link rel="stylesheet" href="place_an_order_css.css">
+    <script type="text/javascript" src="main_page_js.js"></script>
+    <title></title>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <!--<div class="logo">
+          LOGO
+        </div>-->
+        <ul class="proper-align">
+          <li><a href="#" class="cool-link">Home</a></li>
+          <li><a href="#" class="cool-link">About</a></li>
+          <li><a href="#" class="cool-link">Blog</a></li>
+          <li><a href="#" class="cool-link">Contact</a></li>
+          <li class="right-align cool-link"><a href="logout.php">Logout</a></li>
+          <!--<button id="myButton" class="right-align" type="button" name="button">Logout</button>-->
+          <li class="right-align">Username</li>
+          <li class="right-align"><img id="userImage" src="user.jpg"></li>
+        </ul>
+      </nav>
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <!--<a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>-->
+        <p>Your Cart</p>
+        <button onclick="calculate()" name="button">Check-Out!</button>
+        <ol id="list">
+        </ol>
+        <ul id="amount">
+        </ul>
+        <!--<p id="demo"></p>-->
+      </div>
+      <button id="cartButton" onclick="openNav()" type="button" name="button">Check your Cart!</button>
+      <div class="menu">
+        <div class="row">
+          <div class="column animated fadeInLeft">
+            <br>
+            <img src="542038393-1024x1024.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="paratha" onclick="paratha()" name="Paratha">Purchase</button>
+          </div>
+          <div class="column animated fadeInLeft">
+            <br>
+            <img src="asnim-asnim-142813-unsplash.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="sandwich" onclick="sandwich()" name="Sandwich">Purchase</button>
+          </div>
+          <div class="column animated fadeInLeft">
+            <br>
+            <img src="brian-chan-12169-unsplash.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="chicken" onclick="chicken()" name="Chicken">Purchase</button>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="column animated fadeInLeft">
+            <img src="shenggeng-lin-715457-unsplash.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="croissant" onclick="croissant()" name="Croissant">Purchase</button>
+          </div>
+          <div class="column animated fadeInLeft">
+            <img src="thomas-tucker-391058-unsplash.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="pizza" onclick="pizza()" name="Pizza">Purchase</button>
+          </div>
+          <div class="column animated fadeInLeft">
+            <img src="brownies_dessert_cream_chocolate_106818_1920x1080.jpg" alt="">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <button id="brownie" onclick="brownie()" name="Brownie">Purchase</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      /*function paratha() {
+          var foodItem = document.getElementById("paratha").name;
+          document.getElementById("demo").innerHTML = foodItem;
+          console.log(foodItem);
+      }
+      function sandwich() {
+          var foodItem = document.getElementById("sandwich").name;
+          document.getElementById("demo").innerHTML = foodItem;
+          console.log(foodItem);
+      }
+      function chicken() {
+          var foodItem = document.getElementById("chicken").name;
+          document.getElementById("demo").innerHTML = foodItem;
+          console.log(foodItem);
+      }
+      function croissant() {
+          var foodItem = document.getElementById("croissant").name;
+          document.getElementById("demo").innerHTML = foodItem;
+          console.log(foodItem);
+      }
+      function pizza() {
+          var foodItem = document.getElementById("pizza").name;
+          document.getElementById("demo").innerHTML = foodItem;
+          console.log(foodItem);
+      }
+      function brownie() {
+          var foodItem = document.getElementById("brownie").name;
+          document.getElementById("demo").innerHTML = foodItem;
+      }*/
+      var amount = 0;
+      function paratha() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("paratha");
+        li.innerHTML = foodItem.name + '----- 30/-';
+        amount = amount + 30;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function sandwich() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("sandwich");
+        li.innerHTML = foodItem.name + '----- 40/-';
+        amount = amount + 40;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function chicken() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("chicken");
+        li.innerHTML = foodItem.name + '----- 100/-';
+        amount = amount + 100;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function croissant() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("croissant");
+        li.innerHTML = foodItem.name + '----- 80/-';
+        amount = amount + 80;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function pizza() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("pizza");
+        li.innerHTML = foodItem.name + '----- 50/-';
+        amount = amount + 50;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function brownie() {
+        var li = document.createElement("LI");
+        var foodItem = document.getElementById("brownie");
+        li.innerHTML = foodItem.name + '----- 60/-';
+        amount = amount + 60;
+        document.getElementById("list").appendChild(li);
+        console.log(foodItem);
+      }
+
+      function calculate() {
+        var li = document.createElement("LI");
+        li.innerHTML = "Amount: " + amount;
+        document.getElementById("amount").appendChild(li);
+      }
+
+      function openNav() {
+        document.getElementById("mySidenav").style.width="250px";
+        /*document.getElementById("main").style.marginLeft="250px";
+        document.body.style.backgroundColor="rgba(0,0,0,0.4)";*/
+      }
+
+      function closeNav() {
+        document.getElementById("mySidenav").style.width="0";
+        /*document.getElementById("main").style.marginLeft="0";
+        document.body.style.backgroundColor="white";*/
+      }
+    </script>
+  </body>
+</html>

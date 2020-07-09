@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+
+    <link rel="stylesheet" href="contact_us_css.css">
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <div class="center">
+          <ul>
+            <li><a href="#" class="cool-link">Home</a></li>
+            <li><a href="#" class="cool-link">About</a></li>
+            <li><a href="#" class="cool-link">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="header">
+        <h1>Contact Us!</h1>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </p>
+      </div>
+      <div class="form">
+        <form action="contact_us.php" method="post">
+          <input type="text" name="name" placeholder="Name">
+          <input type="text" name="email" placeholder="E-Mail">
+          <input type="text" name="message" id="msg" placeholder="Message">
+          <button type="submit" onclick="thankyou()">Let's Talk!</button>
+        </form>
+        <script>
+          function thankyou(){
+            window.alert("Thanks for contacting us!!! We will reply soon ");
+          }
+        </script>
+      </div>
+    </div>
+  </body>
+</html>
